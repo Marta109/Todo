@@ -1,13 +1,16 @@
 {
   "files": {
     "main.css": "/Todo/static/css/main.5ff0b94d.css",
-    "main.js": "/Todo/static/js/main.6a00ca1b.js",
+    "main.js": "/Todo/static/js/main.7e800e45.js",
+    "static/media/doneSound.mp3": "/Todo/static/media/doneSound.b59f3d38c911a02e1915.mp3",
+    "static/media/importantSound.mp3": "/Todo/static/media/importantSound.5e9e89f2662fd644857b.mp3",
+    "static/media/deleteSound.mp3": "/Todo/static/media/deleteSound.a778d34210599d96d168.mp3",
     "index.html": "/Todo/index.html",
     "main.5ff0b94d.css.map": "/Todo/static/css/main.5ff0b94d.css.map",
-    "main.6a00ca1b.js.map": "/Todo/static/js/main.6a00ca1b.js.map"
+    "main.7e800e45.js.map": "/Todo/static/js/main.7e800e45.js.map"
   },
   "entrypoints": [
     "static/css/main.5ff0b94d.css",
-    "static/js/main.6a00ca1b.js"
+    "static/js/main.7e800e45.js"
   ]
 }
