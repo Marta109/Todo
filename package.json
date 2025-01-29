@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://marta109.github.io/Todo/",
+  "start_url": ".",
   "dependencies": {
     "cra-template": "1.2.0",
     "react": "^19.0.0",
