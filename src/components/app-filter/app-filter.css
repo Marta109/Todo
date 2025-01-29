@@ -1,0 +1,18 @@
+.app-filter {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.app-filter label {
+  background-color: #7d77ec;
+  color: white;
+  border: none;
+}
+
+.app-filter label:hover {
+  color: black !important;
+  background-color: #0a61e4 !important;
+}

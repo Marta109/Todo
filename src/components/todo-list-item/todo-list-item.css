@@ -1,0 +1,126 @@
+.todo-list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  margin-top: 5px;
+
+  /* width: 50%; */
+}
+
+.todo-list-item:first-child {
+  margin-top: 0;
+}
+
+.todo-list-item input {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 5px;
+  border-color: #afacdd;
+}
+
+.todo-list-item .action-btns {
+  gap: 3px;
+}
+
+.todo-list-item button {
+  /* background-color: #9C9CF1; */
+  /* background-color: #7d77ec; */
+  border: none;
+  border-radius: 10px;
+}
+
+/* -------btns - styles ------------------------*/
+
+.todo-list-item .btn-cookie {
+  /* background-color: rgb(52, 146, 52); */
+  background-color: #9c9cf1;
+}
+
+.todo-list-item .btn-cookie i {
+  color: white;
+  font-weight: bold;
+}
+
+.todo-list-item .btn-star {
+  background-color: #9c9cf1;
+}
+
+.todo-list-item .btn-trash {
+  /* background-color: #ffc107;
+  background-color: #ee6b53; */
+  background-color: #9c9cf1;
+  /* color: white; */
+  /* color: #ffc107; */
+}
+/* .todo-list-item .btn-trash i {
+  /* color: #ad0707; */
+/* } */
+
+.todo-list-item .btn-cookie:hover {
+  background-color: rgb(45, 94, 45);
+  /* color: #303d33; */
+}
+
+.todo-list-item.done .btn-cookie:hover {
+  background-color: rgb(6, 68, 6);
+}
+
+.todo-list-item .btn-cookie:hover i {
+  color: rgb(255, 255, 255);
+}
+
+.todo-list-item .btn-star:hover {
+  background-color: rgb(231, 155, 93);
+}
+.todo-list-item.important .btn-star:hover {
+  background-color: rgb(204, 147, 101);
+}
+
+.todo-list-item .btn-star:hover i {
+  color: #ffc107;
+}
+
+.todo-list-item .btn-trash:hover {
+  background-color: rgb(117, 48, 9);
+}
+.todo-list-item .btn-trash:hover i {
+  color: rgb(228, 51, 20);
+}
+
+/* ------btns - done --------------------------  */
+
+.todo-list-item.done .btn-cookie {
+  background-color: rgb(52, 146, 52);
+}
+
+.todo-list-item.done .btn-cookie i {
+  color: #abe7c4;
+}
+
+.todo-list-item.done input,
+.todo-list-item.done label {
+  text-decoration: line-through;
+  color: #333131 !important;
+  background-color: #0bbe53;
+  border-color: green;
+}
+
+/* ----btns - important ----------------------------- */
+.todo-list-item.important .btn-star {
+  background-color: rgb(238, 219, 159);
+  background-color: rgb(245, 127, 30);
+}
+
+.todo-list-item.important .btn-star i {
+  color: #ffc107;
+}
+
+.todo-list-item.important input,
+.todo-list-item.important label {
+  /* border: #fd7e14, 4px solid; */
+  border: #eeae79, 4px solid;
+  color: red;
+}
+
+/* ------------------------------------ */

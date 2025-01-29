@@ -1,0 +1,13 @@
+.todo-add-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* width: 50%; */
+}
+
+.todo-add-form .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
