@@ -1,6 +1,9 @@
 import { useState } from "react";
 import "./todo-list-item.css";
 import TodoAPI from "../../server/todoApi";
+import importantSound from "../../sounds/importantSound.mp3";
+import doneSound from "../../sounds/doneSound.mp3";
+import deleteSound from "../../sounds/deleteSound.mp3";
 
 const TodoListItem = ({
   deleteTodo,
@@ -19,6 +22,11 @@ const TodoListItem = ({
   const imo = importantly ? "important" : "";
   const classes = `list-group-item todo-list-item ${done} ${imo}`;
 
+  const playSound = (sound) => {
+    const audio = new Audio(sound);
+    audio.play();
+  };
+
   const updateHandler = (updatedData) => {
     TodoAPI.updateTodo(id, updatedData).then((data) => {
       if (data) {
@@ -29,6 +37,9 @@ const TodoListItem = ({
 
   const isImportant = () => {
     setImportant(!importantly);
+    if (!importantly) {
+      playSound(importantSound);
+    }
   };
 
   const isCompleted = () => {
@@ -38,6 +49,9 @@ const TodoListItem = ({
       userId,
     };
     setCompleted(!finished);
+    if (!finished) {
+      playSound(doneSound);
+    }
     updateHandler(updateTodo);
   };
 
@@ -45,6 +59,7 @@ const TodoListItem = ({
     TodoAPI.deleteTodo(id).then((data) => {
       if (data) {
         deleteTodo(id);
+        playSound(deleteSound);
       }
     });
   };
