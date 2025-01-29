@@ -2,11 +2,7 @@
   text-transform: capitalize;
   margin-top: 20px;
   padding: 10px;
-  /* border: 2px solid #fff; */
-  /* border-image: linear-gradient(-45deg, #3498db, #d622e6) 1; */
-  /* border-radius: 10px; */
   width: 50%;
-  /* background-color: #9c9cf1; */
 
   background-color: #fff;
 
@@ -17,8 +13,6 @@
 }
 
 .app-info h1 {
-  /* text-align: center; */
-  /* font-weight: bold; */
   font-style: italic;
   margin: auto;
   font-size: 3em;

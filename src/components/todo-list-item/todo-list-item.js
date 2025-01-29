@@ -50,7 +50,6 @@ const TodoListItem = ({
   };
   return (
     <li className={classes}>
-      {/* <div className="input-group"> */}
       <button
         type="button"
         className="btn-cookie btn-sm "
@@ -70,11 +69,6 @@ const TodoListItem = ({
         }
       />
 
-      {/* <div className="action-btns btn-group" role="group"> */}
-      {/* <button type="button" className="btn-cookie btn-sm ">
-        <i className="fa-solid fa-check"></i>
-      </button> */}
-
       <button type="button" className="btn-star btn-sm ">
         <i className="fas fa-star" onClick={isImportant}></i>
       </button>
@@ -86,8 +80,6 @@ const TodoListItem = ({
       >
         <i className="fas fa-trash"></i>
       </button>
-      {/* </div> */}
-      {/* </div> */}
     </li>
   );
 };

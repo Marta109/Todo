@@ -17,7 +17,7 @@ const AddNewTodo = ({ addTodo }) => {
 
     const todo = newTodo.todo.trim();
 
-    if (!todo || todo === "" || todo.length <= 3) {
+    if (!todo || todo === "" || todo.length <= 2) {
       setLoading(false);
       return;
     }
@@ -48,7 +48,6 @@ const AddNewTodo = ({ addTodo }) => {
         value={newTodo.todo}
       />
       <button className="btn btn-primary" type="submit">
-        {/* <i class="fa-solid fa-plus"></i> */}
         Add
       </button>
     </form>

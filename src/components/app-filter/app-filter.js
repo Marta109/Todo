@@ -12,11 +12,6 @@ const AppFilter = ({ filterTodo }) => {
 
   return (
     <div className="app-filter">
-      {/* <div
-        className="btn-group"
-        role="group"
-        aria-label="Basic radio toggle button group"
-      > */}
       <input
         type="radio"
         className="btn-check"
@@ -69,7 +64,6 @@ const AppFilter = ({ filterTodo }) => {
         Important Todos
       </label>
     </div>
-    // </div>
   );
 };
 

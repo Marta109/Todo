@@ -4,8 +4,6 @@
   align-items: center;
   gap: 5px;
   margin-top: 5px;
-
-  /* width: 50%; */
 }
 
 .todo-list-item:first-child {
@@ -24,8 +22,6 @@
 }
 
 .todo-list-item button {
-  /* background-color: #9C9CF1; */
-  /* background-color: #7d77ec; */
   border: none;
   border-radius: 10px;
 }
@@ -33,7 +29,6 @@
 /* -------btns - styles ------------------------*/
 
 .todo-list-item .btn-cookie {
-  /* background-color: rgb(52, 146, 52); */
   background-color: #9c9cf1;
 }
 
@@ -47,19 +42,12 @@
 }
 
 .todo-list-item .btn-trash {
-  /* background-color: #ffc107;
-  background-color: #ee6b53; */
   background-color: #9c9cf1;
-  /* color: white; */
-  /* color: #ffc107; */
 }
-/* .todo-list-item .btn-trash i {
-  /* color: #ad0707; */
-/* } */
+
 
 .todo-list-item .btn-cookie:hover {
   background-color: rgb(45, 94, 45);
-  /* color: #303d33; */
 }
 
 .todo-list-item.done .btn-cookie:hover {
@@ -118,7 +106,6 @@
 
 .todo-list-item.important input,
 .todo-list-item.important label {
-  /* border: #fd7e14, 4px solid; */
   border: #eeae79, 4px solid;
   color: red;
 }
