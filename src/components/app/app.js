@@ -9,6 +9,7 @@ function App() {
   const {
     data,
     loading,
+    doneTodosCount,
     addTodo,
     searchTodo,
     filterTodo,
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <div className="app">
-      <AppInfo />
+      <AppInfo allTodos={data.length} doneTodos={doneTodosCount} />
       <Action
         addTodo={addTodo}
         searchTodo={searchTodo}

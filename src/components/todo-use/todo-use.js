@@ -3,6 +3,7 @@ import TodoAPI from "../../server/todoApi";
 
 export const useTodos = () => {
   const [data, setData] = useState([]);
+  const [doneTodosCount, setDoneTodosCount] = useState(0);
   const [originalData, setOriginalData] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -15,6 +16,12 @@ export const useTodos = () => {
       })
       .finally(() => setLoading(false));
   }, []);
+
+  useEffect(() => {
+    setDoneTodosCount(
+      originalData.filter((item) => item.completed === true).length
+    );
+  }, [originalData]);
 
   const addTodo = (todo) => {
     setOriginalData([...originalData, todo]);
@@ -84,7 +91,6 @@ export const useTodos = () => {
         todo.id === updatedTodo.id ? updatedTodo : todo
       )
     );
-
     setLoading(false);
   };
 
@@ -92,6 +98,7 @@ export const useTodos = () => {
     data,
     originalData,
     loading,
+    doneTodosCount,
     addTodo,
     searchTodo,
     filterTodo,
