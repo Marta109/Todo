@@ -7,9 +7,9 @@
   background-color: #fff;
 
   border: 10px solid rgb(156, 156, 241);
-  border-radius: 10px;
   color: #9c9cf1;
   font-style: italic;
+  border-radius: 10px;
 }
 
 .app-info h1 {
@@ -21,8 +21,11 @@
     -4px 5px #8da1ff, -5px 4px #c0cbff, -5px 6px #8da1ff, -6px 5px #c0cbff,
     -6px 7px #8da1ff, -7px 6px #c0cbff, -7px 8px #8da1ff, -8px 7px #c0cbff;
   text-align: center;
+  padding: 10px;
 }
 
-/* .app-info .done-count {
-   color: #0BBE53; 
-} */
+@media (max-width: 820px) {
+  .app-info {
+    width: 100%;
+  }
+}

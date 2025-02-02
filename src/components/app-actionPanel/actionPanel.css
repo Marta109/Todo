@@ -52,3 +52,9 @@ accordion-flush > .accordion-item > .accordion-header .accordion-button,
   .accordion-button.collapsed {
   border-radius: 10px;
 }
+
+@media (max-width: 820px) {
+  .accordion{
+    width: 100%;
+  }
+}

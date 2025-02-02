@@ -1,0 +1,40 @@
+.todo-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  /* background-color: #9c9cf2; */
+}
+
+.todo-pagination .pagination {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.todo-pagination .btns button {
+  background-color: #7d77ec;
+  color: white;
+  /* color: #9c9cf2; */
+}
+
+.todo-pagination .page-link {
+  cursor: pointer;
+}
+
+.todo-pagination .page-link:hover {
+  color: black;
+  background-color: #0a61e4;
+}
+
+.page-item.disabled.btns button {
+  background-color: grey !important;
+  color: white;
+}
+
+.page-item.disabled.btns:hover {
+  cursor: not-allowed;
+}
+
+

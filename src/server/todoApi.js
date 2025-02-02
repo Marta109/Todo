@@ -1,10 +1,10 @@
 class TodoAPI {
   static baseUrl = "https://dummyjson.com/todos";
-  static baseUrlLimit = "https://dummyjson.com/todos?limit=5&skip=10";
+  static baseUrlLimit = "https://dummyjson.com/todos?limit=4&skip=0";
 
-  static async getAllTodos() {
+  static async getAllTodos(skip = 0) {
     try {
-      const response = await fetch(`${TodoAPI.baseUrlLimit}`);
+      const response = await fetch(`${TodoAPI.baseUrl}?limit=4&skip=${skip}`);
       if (!response.ok) {
         throw new Error(`Error ${response.status}`);
       }

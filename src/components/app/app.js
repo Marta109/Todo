@@ -6,29 +6,21 @@ import Action from "../app-actionPanel/actionPanel";
 import Spinner from "../spinner/spinner";
 
 function App() {
-  const {
-    data,
-    loading,
-    doneTodosCount,
-    addTodo,
-    searchTodo,
-    filterTodo,
-    deleteTodo,
-    updateTodo,
-  } = useTodos();
+  const { loading, filter, pagination, todoInfo, todoAction, todoListAction } =
+    useTodos();
 
   return (
     <div className="app">
-      <AppInfo allTodos={data.length} doneTodos={doneTodosCount} />
-      <Action
-        addTodo={addTodo}
-        searchTodo={searchTodo}
-        filterTodo={filterTodo}
-      />
+      <AppInfo todoInfo={todoInfo} />
+      <Action todoAction={todoAction} />
       {loading ? (
         <Spinner name="Todos" />
       ) : (
-        <TodoList data={data} deleteTodo={deleteTodo} updateTodo={updateTodo} />
+        <TodoList
+          todoListAction={todoListAction}
+          pagination={pagination}
+          filterName={filter}
+        />
       )}
     </div>
   );

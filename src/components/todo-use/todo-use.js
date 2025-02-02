@@ -3,19 +3,23 @@ import TodoAPI from "../../server/todoApi";
 
 export const useTodos = () => {
   const [data, setData] = useState([]);
+  const [filter, setFilter] = useState("all");
+  const [total, setTotal] = useState(0);
   const [doneTodosCount, setDoneTodosCount] = useState(0);
   const [originalData, setOriginalData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [currentPage, setCurrentPage] = useState(0);
 
   useEffect(() => {
     setLoading(true);
-    TodoAPI.getAllTodos()
+    TodoAPI.getAllTodos(currentPage)
       .then((data) => {
+        setTotal(data.total);
         setOriginalData(data.todos);
         setData(data.todos);
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [currentPage]);
 
   useEffect(() => {
     setDoneTodosCount(
@@ -26,6 +30,7 @@ export const useTodos = () => {
   const addTodo = (todo) => {
     setOriginalData([...originalData, todo]);
     setData([...data, todo]);
+    setTotal((total) => total + 1);
   };
 
   const searchTodo = (name) => {
@@ -45,6 +50,7 @@ export const useTodos = () => {
 
   const filterTodo = (filterName) => {
     setLoading(true);
+    setFilter(filterName);
     if (filterName === "all") {
       setLoading(false);
       setData(originalData);
@@ -78,6 +84,11 @@ export const useTodos = () => {
     setOriginalData(originalData.filter((item) => item.id !== id));
     setData(data.filter((item) => item.id !== id));
     setLoading(false);
+    setTotal((total) => total - 1);
+
+    if (originalData.length - 1 === 0 && data.length - 1 === 0) {
+      setCurrentPage(currentPage + 1);
+    }
   };
 
   const updateTodo = (updatedTodo) => {
@@ -95,14 +106,28 @@ export const useTodos = () => {
   };
 
   return {
-    data,
-    originalData,
+    pagination: {
+      currentPage,
+      total,
+      limit: 4,
+      setCurrentPage,
+    },
+    todoInfo: {
+      allTodos: total,
+      doneTodos: doneTodosCount,
+      currentTodos: data.length,
+    },
+    todoAction: {
+      addTodo,
+      searchTodo,
+      filterTodo,
+    },
+    todoListAction: {
+      data,
+      deleteTodo,
+      updateTodo,
+    },
     loading,
-    doneTodosCount,
-    addTodo,
-    searchTodo,
-    filterTodo,
-    deleteTodo,
-    updateTodo,
+    filter,
   };
 };

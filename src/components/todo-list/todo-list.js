@@ -1,7 +1,12 @@
 import "./todo-list.css";
 import TodoListItem from "../todo-list-item/todo-list-item";
+import Pagination from "../todo-pagination/todo-pagination";
 
-const TodoList = ({ data, deleteTodo, updateTodo }) => {
+const TodoList = ({
+  todoListAction: { data, deleteTodo, updateTodo },
+  pagination,
+  filterName,
+}) => {
   if (!Array.isArray(data)) return;
   if (data.length === 0)
     return (
@@ -21,7 +26,12 @@ const TodoList = ({ data, deleteTodo, updateTodo }) => {
     );
   });
 
-  return <ul className="todo-list">{elements}</ul>;
+  return (
+    <ul className="todo-list">
+      {elements}
+      {filterName === "all" ? <Pagination pagination={pagination} /> : ""}
+    </ul>
+  );
 };
 
 export default TodoList;
