@@ -3,7 +3,7 @@ import AppFilter from "../app-filter/app-filter";
 import SearchPanel from "../search-panel/search-panel";
 import TodoAddFrm from "../todo-add-new/add-new-todo";
 
-const Action = ({ addTodo, searchTodo, filterTodo }) => {
+const Action = ({ todoAction: { addTodo, searchTodo, filterTodo } }) => {
   return (
     <div className="accordion accordion-flush" id="accordionFlushExample">
       <div className="accordion-item">

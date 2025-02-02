@@ -45,7 +45,6 @@
   background-color: #9c9cf1;
 }
 
-
 .todo-list-item .btn-cookie:hover {
   background-color: rgb(45, 94, 45);
 }
@@ -83,7 +82,7 @@
 }
 
 .todo-list-item.done .btn-cookie i {
-  color: #abe7c4;
+  color: #ddf3e6;
 }
 
 .todo-list-item.done input,
@@ -111,3 +110,8 @@
 }
 
 /* ------------------------------------ */
+@media (max-width: 500px) {
+  .todo-list-item input {
+    font-size: 15px;
+  }
+}

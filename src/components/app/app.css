@@ -6,6 +6,28 @@
   align-items: center;
   gap: 10px;
   padding: 20px;
+  /* variant 1 */
   background: -webkit-linear-gradient(179deg, #f235b3, #8586e0, #709bb6);
   background: linear-gradient(179deg, #f235b3, #8586e0, #709bb6);
+
+  /* variant 2 */
+  background: linear-gradient(
+    #c6e4ee 0%,
+    #c6e4ee 40%,
+    #fed1ae 60%,
+    #faa0b9 70%,
+    #cb7dcb 80%,
+    #757ecb 100%
+  );
+
+  /* variant 3 */
+  background-image: url("/public/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 500px) {
+  .app {
+    padding: 10px;
+  }
 }

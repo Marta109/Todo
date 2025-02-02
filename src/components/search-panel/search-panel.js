@@ -7,7 +7,7 @@ const SearchPanel = ({ searchTodo }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     searchTodo(search);
-    setSearch("");
+    // setSearch("");
   };
 
   return (

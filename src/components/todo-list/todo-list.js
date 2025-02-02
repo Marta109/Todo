@@ -11,7 +11,13 @@ const TodoList = ({
   if (data.length === 0)
     return (
       <ul className="todo-list">
-        <p>No tasks found!!!.</p>
+        <p> No tasks available. Enjoy your free time! 🎉</p>
+        <div className="no-task">
+          <img
+            src="https://media.giphy.com/media/qUEkcv8EGkRUV4Ufl0/giphy.gif?cid=ecf05e472z05vumh03zmj72yluh74i3e5n679pb4b2feenc4&ep=v1_gifs_search&rid=giphy.gif&ct=g"
+            alt="No tasks"
+          />
+        </div>
       </ul>
     );
 
