@@ -22,8 +22,7 @@ React-powered to-do list with full CRUD operations, filtering, and external data
 ---
 
 ## 🔗 Links
-
-- **Live Demo:** [Try It Here](https://marta109.github.io/Todo/)
+- [Live Demo](https://marta109.github.io/Todo/)  
 
 ---
 
